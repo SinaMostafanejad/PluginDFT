@@ -26,7 +26,7 @@
 #
 # @END LICENSE
 #
+add_psi4_plugin(mydft plugin.cc)
 
-add_psi4_plugin(mydft plugin.cc diis.cc dft.cc Func_HC.cc)
-
-target_include_directories(mydft SYSTEM PRIVATE ${gau2grid_INCLUDE_DIRS}/gau2grid)
+target_include_directories(mydft PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/dft)
+target_include_directories(mydft PRIVATE ${gau2grid_INCLUDE_DIRS}/gau2grid)

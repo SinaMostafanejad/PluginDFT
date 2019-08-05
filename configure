@@ -1,0 +1,14 @@
+#!/bin/bash
+
+rm -rf CMakeFiles/ cmake_install.cmake CMakeCache.txt build
+
+mkdir build && cd build
+
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release \
+      -C /usr/local/psi4/share/cmake/psi4/psi4PluginCache.cmake \
+      -DCMAKE_PREFIX_PATH=/usr/local/psi4 \
+      -DLibxc_DIR=/home/sina/MySoftwares/libxc/cmake \
+      -Dgau2grid_DIR=/home/sina/MySoftwares/gau2grid/share/cmake/gau2grid \
+      ..
+
+cmake --build . --config Release
