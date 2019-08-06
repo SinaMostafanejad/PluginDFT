@@ -29,4 +29,4 @@
 add_psi4_plugin(mydft plugin.cc)
 
 target_include_directories(mydft PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/dft)
-target_include_directories(mydft PRIVATE ${gau2grid_INCLUDE_DIRS}/gau2grid)
+#target_include_directories(mydft PRIVATE ${gau2grid_INCLUDE_DIRS}/gau2grid)
