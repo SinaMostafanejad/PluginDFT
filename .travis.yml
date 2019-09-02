@@ -21,7 +21,7 @@ script:
 # Generate and deploy documentation
 deploy:
   provider: pages
-  skip_cleanup: true
+  skip_cleanup: false
   local_dir: docs
   github_token: $GH_REPO_TOKEN
   on:
