@@ -1,0 +1,1414 @@
+\hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver}{}\doxysection{psi\+::mydft\+::D\+F\+T\+Solver Class Reference}
+\label{classpsi_1_1mydft_1_1_d_f_t_solver}\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+
+
+{\ttfamily \#include $<$dft.\+h$>$}
+
+Inheritance diagram for psi\+::mydft\+::D\+F\+T\+Solver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpsi_1_1mydft_1_1_d_f_t_solver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a0651712af9d9aba95bfbac85739f58fb}{D\+F\+T\+Solver}} (std\+::shared\+\_\+ptr$<$ psi\+::\+Wavefunction $>$ reference\+\_\+wavefunction, Options \&options)
+\item 
+\mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a657dfa1e6861325c68f42216a43d31c2}{$\sim$\+D\+F\+T\+Solver}} ()
+\item 
+void \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a93ba944697636ed68866f55e66c2b985}{common\+\_\+init}} ()
+\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a35aa85b81b2b57d5817ef7e5d56ae1cc}{compute\+\_\+energy}} ()
+\item 
+virtual bool \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aca0500e392ce3f5f0cbd23e732af2d3e}{same\+\_\+a\+\_\+b\+\_\+orbs}} () const
+\item 
+virtual bool \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a98ec9ff3ee77f09fc36328134ee14842}{same\+\_\+a\+\_\+b\+\_\+dens}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ Matrix $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_abacb08860446724fc574301e0d45bdcb}{Orbital\+Gradient}} (std\+::shared\+\_\+ptr$<$ Matrix $>$ D, std\+::shared\+\_\+ptr$<$ Matrix $>$ F, std\+::shared\+\_\+ptr$<$ Matrix $>$ Shalf)
+\begin{DoxyCompactList}\small\item\em evaluate the orbital gradient \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a9d38f0b66eb3c65feb8a7a35ae115a66}{Exchange\+Correlation\+Energy}} ()
+\begin{DoxyCompactList}\small\item\em explicitly evaluate exchange correlation energy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a7306ce12764d13d0517018967477d49c}{Build\+Phi\+Matrix}} (std\+::shared\+\_\+ptr$<$ V\+Base $>$ potential, std\+::shared\+\_\+ptr$<$ Point\+Functions $>$ points\+\_\+func, std\+::string phi\+\_\+type, std\+::shared\+\_\+ptr$<$ Matrix $>$ myphi)
+\begin{DoxyCompactList}\small\item\em a function to build phi/phi\+\_\+x/... \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a0bb08d68329aa9347a2774a00befd253}{Gfunction}} (double r, double A, double a1, double b1, double b2, double b3, double b4, double p)
+\begin{DoxyCompactList}\small\item\em build G spin-\/interpolation formula \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a6e31c9830156ac73cb62626dfebdf716}{Build\+Rho}} (std\+::shared\+\_\+ptr$<$ Matrix $>$ Da, std\+::shared\+\_\+ptr$<$ Matrix $>$ Db)
+\begin{DoxyCompactList}\small\item\em build spin densities and gradients \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a2ef4ec49de187fc12372356c00621259}{E\+X\+\_\+\+L\+DA}} (std\+::shared\+\_\+ptr$<$ Vector $>$ rho\+\_\+a, std\+::shared\+\_\+ptr$<$ Vector $>$ rho\+\_\+b)
+\begin{DoxyCompactList}\small\item\em build E\+X\+\_\+\+L\+D\+A(rho) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a82520363205009f882336deeba18b83e}{E\+X\+\_\+\+L\+S\+D\+A\+\_\+\+Sigma}} (std\+::shared\+\_\+ptr$<$ Vector $>$ rho\+\_\+sigma)
+\begin{DoxyCompactList}\small\item\em build E\+X\+\_\+\+L\+S\+D\+A(rho\+\_\+sigma) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a4269a92c79149361a83c283fe27b1359}{E\+X\+\_\+\+L\+S\+D\+A\+\_\+I}} (std\+::shared\+\_\+ptr$<$ Vector $>$ rho\+\_\+a, std\+::shared\+\_\+ptr$<$ Vector $>$ rho\+\_\+b)
+\begin{DoxyCompactList}\small\item\em build E\+X\+\_\+\+L\+S\+D\+A(rho\+\_\+a, rho\+\_\+b) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ae7e310a13ec57ebf820be4fbc2d7cddf}{E\+X\+\_\+\+L\+S\+D\+A\+\_\+\+I\+II}} (std\+::shared\+\_\+ptr$<$ Vector $>$ rho, std\+::shared\+\_\+ptr$<$ Vector $>$ zeta)
+\begin{DoxyCompactList}\small\item\em build E\+X\+\_\+\+L\+S\+D\+A(rho, zeta) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aa0eb66e31b972e1096a8a942fc274307}{E\+X\+\_\+\+B86\+\_\+\+M\+GC}} ()
+\begin{DoxyCompactList}\small\item\em build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aa0eb66e31b972e1096a8a942fc274307}{E\+X\+\_\+\+B86\+\_\+\+M\+G\+C()}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a4f4a088595aaedaa9cbc34982eb6d575}{E\+X\+\_\+\+B88}} ()
+\begin{DoxyCompactList}\small\item\em build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a4f4a088595aaedaa9cbc34982eb6d575}{E\+X\+\_\+\+B88()}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ae7b0fae6c90704c4a8bdf195915359d9}{E\+X\+\_\+\+B88\+\_\+I}} ()
+\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ab30d5926bf2b56045e60f3c2e68d7573}{E\+X\+\_\+\+B3}} ()
+\begin{DoxyCompactList}\small\item\em build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ab30d5926bf2b56045e60f3c2e68d7573}{E\+X\+\_\+\+B3()}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a67b3816769baf16cb1e8d7ffa76c9d2c}{E\+X\+\_\+\+P\+BE}} ()
+\begin{DoxyCompactList}\small\item\em build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a67b3816769baf16cb1e8d7ffa76c9d2c}{E\+X\+\_\+\+P\+B\+E()}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a69867a5089ee70ec80a2a164cab22af8}{E\+X\+\_\+\+P\+B\+E\+\_\+I}} ()
+\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ac722adcf2074b3b808857737dba98d4e}{E\+X\+\_\+w\+P\+B\+E\+\_\+I}} ()
+\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a6b629007fca1c29ed45635fd3a304e2b}{E\+X\+\_\+\+R\+P\+BE}} ()
+\begin{DoxyCompactList}\small\item\em build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a6b629007fca1c29ed45635fd3a304e2b}{E\+X\+\_\+\+R\+P\+B\+E()}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a861d5fa1ad827d121f6113d37a80c042}{E\+X\+\_\+\+U\+P\+BE}} ()
+\begin{DoxyCompactList}\small\item\em build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a861d5fa1ad827d121f6113d37a80c042}{E\+X\+\_\+\+U\+P\+B\+E()}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a8f547d3087f04ef42abaa207ed85fdec}{E\+C\+\_\+\+B88\+\_\+\+OP}} ()
+\begin{DoxyCompactList}\small\item\em build E\+C\+\_\+\+B88() \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aa6d0641987db10dbd2d6535ae848b4bd}{E\+C\+\_\+\+L\+YP}} ()
+\begin{DoxyCompactList}\small\item\em build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aa6d0641987db10dbd2d6535ae848b4bd}{E\+C\+\_\+\+L\+Y\+P()}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a92f45badc45ac04a993cc796dfc77f04}{E\+C\+\_\+\+L\+Y\+P\+\_\+I}} ()
+\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a16650d73d955def8766fbca5cdf80b75}{E\+C\+\_\+\+P\+BE}} ()
+\begin{DoxyCompactList}\small\item\em build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a16650d73d955def8766fbca5cdf80b75}{E\+C\+\_\+\+P\+B\+E()}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aae3ebea608a9087ca989f52566085ba7}{E\+C\+\_\+\+P\+B\+E\+\_\+I}} ()
+\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a48c95958444f7b6d7e63d48432983c76}{E\+C\+\_\+\+V\+W\+N3\+\_\+\+R\+PA}} ()
+\begin{DoxyCompactList}\small\item\em build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a48c95958444f7b6d7e63d48432983c76}{E\+C\+\_\+\+V\+W\+N3\+\_\+\+R\+P\+A()}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a44d723a09da0c164be0b31d08a8b53e2}{E\+C\+\_\+\+V\+W\+N3\+\_\+\+R\+P\+A\+\_\+\+I\+II}} ()
+\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a40d82b160139cad49f789dd34e055ec5}{E\+C\+\_\+\+V\+W\+N5\+\_\+I}} ()
+\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a56dd6ab403f4e83a477097126ac1a2e0}{E\+C\+\_\+\+V\+W\+N5\+\_\+\+R\+P\+A\+\_\+I}} ()
+\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aa155f60d537ea0e8690ec1579c3258b8}{E\+X\+C\+\_\+\+B3\+L\+YP}} ()
+\begin{DoxyCompactList}\small\item\em build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aa155f60d537ea0e8690ec1579c3258b8}{E\+X\+C\+\_\+\+B3\+L\+Y\+P()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a8b14995264f1c56445991e9208f66e72}{enuc\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the nuclear repulsion energy \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Matrix $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a028b5026877b9b194f79936148d2f206}{Va\+\_\+}}
+\begin{DoxyCompactList}\small\item\em xc potential matrices \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Matrix $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a18e5b14676185ddbdedd95ec2cf4c3d4}{Vb\+\_\+}}
+\item 
+int \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_af619b852aca149053b9d87351aeab3dc}{deriv\+\_\+}}
+\begin{DoxyCompactList}\small\item\em level of differentiation \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_addec44b3a027f190194a2de7021dfb3f}{is\+\_\+gga\+\_\+}}
+\begin{DoxyCompactList}\small\item\em is gga? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a517705f279c85c9a23f280d902370572}{is\+\_\+meta\+\_\+}}
+\begin{DoxyCompactList}\small\item\em is meta? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a8a566221b4fbb1d612bb7ea79a836007}{is\+\_\+unpolarized\+\_\+}}
+\begin{DoxyCompactList}\small\item\em is unpolarized (restricted)? \end{DoxyCompactList}\item 
+long int \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a9233049f24b7723b4d16f7a91fe37ea2}{phi\+\_\+points\+\_\+}}
+\begin{DoxyCompactList}\small\item\em number of grid points\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Matrix $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a809915e8a9587e23e68731be2da234a8}{super\+\_\+phi\+\_\+}}
+\begin{DoxyCompactList}\small\item\em phi matrix \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Matrix $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a1485989464e5e3db059053389824944b}{super\+\_\+phi\+\_\+x\+\_\+}}
+\begin{DoxyCompactList}\small\item\em d phi / dx matrix \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Matrix $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_abd53261be0e1d2bc3ee62d3ceabc635b}{super\+\_\+phi\+\_\+y\+\_\+}}
+\begin{DoxyCompactList}\small\item\em d phi / dy matrix \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Matrix $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a03b92e24724c21a7e42f934b7f0c6e76}{super\+\_\+phi\+\_\+z\+\_\+}}
+\begin{DoxyCompactList}\small\item\em d phi / dz matrix \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a3bc80a249d115f14d1e20323895a489a}{grid\+\_\+x\+\_\+}}
+\begin{DoxyCompactList}\small\item\em grid x values \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a684823a2c1a723de9c8d95126f6ffcb0}{grid\+\_\+y\+\_\+}}
+\begin{DoxyCompactList}\small\item\em grid y values \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aca67d15d7996bcf085bda0dd4cd224fa}{grid\+\_\+z\+\_\+}}
+\begin{DoxyCompactList}\small\item\em grid z values \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a651a44a7132c15e0084479c7a87c9699}{grid\+\_\+w\+\_\+}}
+\begin{DoxyCompactList}\small\item\em grid weights \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aa5c473285fd59d8d22cd7f316860e360}{rho\+\_\+a\+\_\+}}
+\begin{DoxyCompactList}\small\item\em alpha spin density \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a2fb176d630b3fe41425aee59e5aa694f}{rho\+\_\+b\+\_\+}}
+\begin{DoxyCompactList}\small\item\em beta spin density \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a790c9459107390e0588e0d09b499338d}{rho\+\_\+}}
+\begin{DoxyCompactList}\small\item\em total spin density \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a12f3a767349528967d16d4d442113779}{rho\+\_\+a\+\_\+x\+\_\+}}
+\begin{DoxyCompactList}\small\item\em alpha spin density gradient x \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aebd2bd7e5e961fc6490918616fe298e5}{rho\+\_\+b\+\_\+x\+\_\+}}
+\begin{DoxyCompactList}\small\item\em beta spin density gradient x \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ac4dd0dbeb771fc50187a8f30e6841b42}{rho\+\_\+a\+\_\+y\+\_\+}}
+\begin{DoxyCompactList}\small\item\em alpha spin density gradient y \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ae20bdef95de5b648a9ec923bf768c553}{rho\+\_\+b\+\_\+y\+\_\+}}
+\begin{DoxyCompactList}\small\item\em beta spin density gradient y \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a23096890948e53312738fd9c6ac4b6c0}{rho\+\_\+a\+\_\+z\+\_\+}}
+\begin{DoxyCompactList}\small\item\em alpha spin density gradient z \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a80322630839c5470804cf4876019b875}{rho\+\_\+b\+\_\+z\+\_\+}}
+\begin{DoxyCompactList}\small\item\em beta spin density gradient z \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aaed051a35da613e019517068035cc759}{sigma\+\_\+aa\+\_\+}}
+\begin{DoxyCompactList}\small\item\em inner product of alpha density gradient with itself (gamma\+\_\+aa) \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a7a05bfb4111c314a5acb54f71a71e414}{sigma\+\_\+bb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em inner product of beta density gradient with itself (gamma\+\_\+bb) \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a5faf9c53ba5c6cc14ff469e5e03b1504}{sigma\+\_\+ab\+\_\+}}
+\begin{DoxyCompactList}\small\item\em inner product of alpha density gradient with beta density gradient (gamma\+\_\+ab) \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a7e7e6c1d25ae42515bf7896e5d47e9a5}{sigma\+\_\+}}
+\begin{DoxyCompactList}\small\item\em total density gradient \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a0770fcb7c71eecbf86de9203fed5bac7}{vrho\+\_\+a\+\_\+}}
+\begin{DoxyCompactList}\small\item\em derivative of the functional with respect to rho\+\_\+a\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a898481964e9935d2a201ed14fe2ee3b5}{vrho\+\_\+b\+\_\+}}
+\begin{DoxyCompactList}\small\item\em derivative of the functional with respect to rho\+\_\+b\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a728883147990842a1ce2ba8557a68b89}{vsigma\+\_\+aa\+\_\+}}
+\begin{DoxyCompactList}\small\item\em derivative of the functional with respect to gamma\+\_\+aa\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aadb8a25881145d1ab130a7ded425fc52}{vsigma\+\_\+bb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em derivative of the functional with respect to gamma\+\_\+bb\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ad8de73f0ce06bf8f3f59c12dbb28fa2d}{vsigma\+\_\+ab\+\_\+}}
+\begin{DoxyCompactList}\small\item\em derivative of the functional with respect to gamma\+\_\+ab\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ab41bfdf63e2340a8c7681d53ef3bb4b9}{v2rho\+\_\+a2\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to alpha density \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a7de00f4b6ab4cfb7b8f3bbfff986d80a}{v2rho\+\_\+ab\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to alpha and beta densities \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a79ccd4c97595c7833cb54081812cf33f}{v2rho\+\_\+b2\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to beta density \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a6f26642cbf47ffc20dd467a9b89938b9}{v2rho\+\_\+a\+\_\+sigma\+\_\+aa\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to rho\+\_\+a\+\_\+ and gamma\+\_\+aa\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a5cd1f5f38fd68dee35bd96b6b54ded33}{v2rho\+\_\+b\+\_\+sigma\+\_\+bb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to rho\+\_\+b\+\_\+ and gamma\+\_\+bb\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aef9f1dc622f1eac73621a1a8607c2187}{v2sigma\+\_\+aa2\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to gamma\+\_\+aa\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a4fd50ccb768188d5d50cc9b2a80bbbe5}{v2sigma\+\_\+bb2\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to gamma\+\_\+bb\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a32a412419a2b8f8ca1048bb0a40842af}{v2rho\+\_\+a\+\_\+sigma\+\_\+ab\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to rho\+\_\+a\+\_\+ and gamma\+\_\+ab\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ab60fc0c42cc88e9b72e5649f3ee8078a}{v2rho\+\_\+b\+\_\+sigma\+\_\+ab\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to rho\+\_\+b\+\_\+ and gamma\+\_\+ab\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a8b985e041e036d3cc3f2816ecaa86f42}{v2rho\+\_\+a\+\_\+sigma\+\_\+bb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to rho\+\_\+a\+\_\+ and gamma\+\_\+bb\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_acbfb5895883ed0d444e080fd950dd65d}{v2rho\+\_\+b\+\_\+sigma\+\_\+aa\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to rho\+\_\+b\+\_\+ and gamma\+\_\+aa\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a106a77d149b7febc8f09b57953cc300c}{v2sigma\+\_\+aa\+\_\+ab\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to gamma\+\_\+aa\+\_\+ and gamma\+\_\+ab\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a1e11a85c15a73a70b3871a6d9bfd4626}{v2sigma\+\_\+aa\+\_\+bb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to gamma\+\_\+aa\+\_\+ and gamma\+\_\+bb\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a342cae6770c1c8ea559a8a2996c4dde9}{v2sigma\+\_\+ab2\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to gamma\+\_\+ab\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a17e9aad24d87f5775aa936ec5116bfd6}{v2sigma\+\_\+ab\+\_\+bb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2nd derivative of the functional with respect to gamma\+\_\+ab\+\_\+ and gamma\+\_\+bb\+\_\+ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Matrix $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a73d12809a4119c26949e367fcb821c42}{Shalf\+\_\+}}
+\begin{DoxyCompactList}\small\item\em S$^\wedge$\{-\/1/2\}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Matrix $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_adfc6500838abe05f410a40ffca8562b9}{Shalf2}}
+\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ab7ad4a4e0c598851c6b0fc6a7d353d5a}{zeta\+\_\+}}
+\begin{DoxyCompactList}\small\item\em zeta factor zeta = ( rho\+\_\+a(r) -\/ rho\+\_\+b(r) ) / ( rho\+\_\+a(r) + rho\+\_\+b(r) ) \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aa533e5ed17d8be606fb969c97e827cba}{m\+\_\+}}
+\begin{DoxyCompactList}\small\item\em spin magnetization factor / net spin-\/density m = rho\+\_\+a(r) -\/ rho\+\_\+b(r) \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a7fbed2baefe4ece46b3cf1618d15f703}{rs\+\_\+}}
+\begin{DoxyCompactList}\small\item\em effective radius of density \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a25bbc72ca996aba0ad2b5d852d198b01}{tau\+\_\+a\+\_\+}}
+\begin{DoxyCompactList}\small\item\em tau kinetic energy of alpha electrons \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Vector $>$ \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a7dfcad9a0f49601e218144a70c847f18}{tau\+\_\+b\+\_\+}}
+\begin{DoxyCompactList}\small\item\em tau kinetic energy of beta electrons \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 60 of file dft.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a0651712af9d9aba95bfbac85739f58fb}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a0651712af9d9aba95bfbac85739f58fb}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!DFTSolver@{DFTSolver}}
+\index{DFTSolver@{DFTSolver}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{DFTSolver()}{DFTSolver()}}
+{\footnotesize\ttfamily psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+D\+F\+T\+Solver (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ psi\+::\+Wavefunction $>$}]{reference\+\_\+wavefunction,  }\item[{Options \&}]{options }\end{DoxyParamCaption})}
+
+
+
+Definition at line 82 of file dft.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a657dfa1e6861325c68f42216a43d31c2}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a657dfa1e6861325c68f42216a43d31c2}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!````~DFTSolver@{$\sim$DFTSolver}}
+\index{````~DFTSolver@{$\sim$DFTSolver}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{$\sim$DFTSolver()}{~DFTSolver()}}
+{\footnotesize\ttfamily psi\+::mydft\+::\+D\+F\+T\+Solver\+::$\sim$\+D\+F\+T\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file dft.\+cc.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a7306ce12764d13d0517018967477d49c}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a7306ce12764d13d0517018967477d49c}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!BuildPhiMatrix@{BuildPhiMatrix}}
+\index{BuildPhiMatrix@{BuildPhiMatrix}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{BuildPhiMatrix()}{BuildPhiMatrix()}}
+{\footnotesize\ttfamily void psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+Build\+Phi\+Matrix (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ V\+Base $>$}]{potential,  }\item[{std\+::shared\+\_\+ptr$<$ Point\+Functions $>$}]{points\+\_\+func,  }\item[{std\+::string}]{phi\+\_\+type,  }\item[{std\+::shared\+\_\+ptr$<$ Matrix $>$}]{myphi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+a function to build phi/phi\+\_\+x/... 
+
+
+
+Definition at line 262 of file dft.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a6e31c9830156ac73cb62626dfebdf716}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a6e31c9830156ac73cb62626dfebdf716}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!BuildRho@{BuildRho}}
+\index{BuildRho@{BuildRho}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{BuildRho()}{BuildRho()}}
+{\footnotesize\ttfamily void psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+Build\+Rho (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ Matrix $>$}]{Da,  }\item[{std\+::shared\+\_\+ptr$<$ Matrix $>$}]{Db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build spin densities and gradients 
+
+
+
+Definition at line 748 of file dft.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a93ba944697636ed68866f55e66c2b985}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a93ba944697636ed68866f55e66c2b985}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!common\_init@{common\_init}}
+\index{common\_init@{common\_init}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{common\_init()}{common\_init()}}
+{\footnotesize\ttfamily void psi\+::mydft\+::\+D\+F\+T\+Solver\+::common\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 92 of file dft.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a35aa85b81b2b57d5817ef7e5d56ae1cc}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a35aa85b81b2b57d5817ef7e5d56ae1cc}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!compute\_energy@{compute\_energy}}
+\index{compute\_energy@{compute\_energy}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{compute\_energy()}{compute\_energy()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::compute\+\_\+energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 339 of file dft.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a8f547d3087f04ef42abaa207ed85fdec}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a8f547d3087f04ef42abaa207ed85fdec}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EC\_B88\_OP@{EC\_B88\_OP}}
+\index{EC\_B88\_OP@{EC\_B88\_OP}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EC\_B88\_OP()}{EC\_B88\_OP()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+C\+\_\+\+B88\+\_\+\+OP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build E\+C\+\_\+\+B88() 
+
+
+
+Definition at line 773 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aa6d0641987db10dbd2d6535ae848b4bd}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aa6d0641987db10dbd2d6535ae848b4bd}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EC\_LYP@{EC\_LYP}}
+\index{EC\_LYP@{EC\_LYP}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EC\_LYP()}{EC\_LYP()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+C\+\_\+\+L\+YP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aa6d0641987db10dbd2d6535ae848b4bd}{E\+C\+\_\+\+L\+Y\+P()}} 
+
+
+
+Definition at line 882 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a92f45badc45ac04a993cc796dfc77f04}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a92f45badc45ac04a993cc796dfc77f04}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EC\_LYP\_I@{EC\_LYP\_I}}
+\index{EC\_LYP\_I@{EC\_LYP\_I}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EC\_LYP\_I()}{EC\_LYP\_I()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+C\+\_\+\+L\+Y\+P\+\_\+I (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 816 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a16650d73d955def8766fbca5cdf80b75}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a16650d73d955def8766fbca5cdf80b75}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EC\_PBE@{EC\_PBE}}
+\index{EC\_PBE@{EC\_PBE}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EC\_PBE()}{EC\_PBE()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+C\+\_\+\+P\+BE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a16650d73d955def8766fbca5cdf80b75}{E\+C\+\_\+\+P\+B\+E()}} 
+
+
+
+Definition at line 611 of file Func\+\_\+\+Depos.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aae3ebea608a9087ca989f52566085ba7}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aae3ebea608a9087ca989f52566085ba7}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EC\_PBE\_I@{EC\_PBE\_I}}
+\index{EC\_PBE\_I@{EC\_PBE\_I}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EC\_PBE\_I()}{EC\_PBE\_I()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+C\+\_\+\+P\+B\+E\+\_\+I (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1209 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a48c95958444f7b6d7e63d48432983c76}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a48c95958444f7b6d7e63d48432983c76}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EC\_VWN3\_RPA@{EC\_VWN3\_RPA}}
+\index{EC\_VWN3\_RPA@{EC\_VWN3\_RPA}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EC\_VWN3\_RPA()}{EC\_VWN3\_RPA()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+C\+\_\+\+V\+W\+N3\+\_\+\+R\+PA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a48c95958444f7b6d7e63d48432983c76}{E\+C\+\_\+\+V\+W\+N3\+\_\+\+R\+P\+A()}} 
+
+
+
+Definition at line 1647 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a44d723a09da0c164be0b31d08a8b53e2}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a44d723a09da0c164be0b31d08a8b53e2}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EC\_VWN3\_RPA\_III@{EC\_VWN3\_RPA\_III}}
+\index{EC\_VWN3\_RPA\_III@{EC\_VWN3\_RPA\_III}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EC\_VWN3\_RPA\_III()}{EC\_VWN3\_RPA\_III()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+C\+\_\+\+V\+W\+N3\+\_\+\+R\+P\+A\+\_\+\+I\+II (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1708 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a40d82b160139cad49f789dd34e055ec5}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a40d82b160139cad49f789dd34e055ec5}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EC\_VWN5\_I@{EC\_VWN5\_I}}
+\index{EC\_VWN5\_I@{EC\_VWN5\_I}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EC\_VWN5\_I()}{EC\_VWN5\_I()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+C\+\_\+\+V\+W\+N5\+\_\+I (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1809 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a56dd6ab403f4e83a477097126ac1a2e0}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a56dd6ab403f4e83a477097126ac1a2e0}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EC\_VWN5\_RPA\_I@{EC\_VWN5\_RPA\_I}}
+\index{EC\_VWN5\_RPA\_I@{EC\_VWN5\_RPA\_I}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EC\_VWN5\_RPA\_I()}{EC\_VWN5\_RPA\_I()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+C\+\_\+\+V\+W\+N5\+\_\+\+R\+P\+A\+\_\+I (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1944 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_ab30d5926bf2b56045e60f3c2e68d7573}\label{classpsi_1_1mydft_1_1_d_f_t_solver_ab30d5926bf2b56045e60f3c2e68d7573}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_B3@{EX\_B3}}
+\index{EX\_B3@{EX\_B3}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_B3()}{EX\_B3()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+B3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_ab30d5926bf2b56045e60f3c2e68d7573}{E\+X\+\_\+\+B3()}} 
+
+
+
+Definition at line 286 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aa0eb66e31b972e1096a8a942fc274307}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aa0eb66e31b972e1096a8a942fc274307}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_B86\_MGC@{EX\_B86\_MGC}}
+\index{EX\_B86\_MGC@{EX\_B86\_MGC}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_B86\_MGC()}{EX\_B86\_MGC()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+B86\+\_\+\+M\+GC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aa0eb66e31b972e1096a8a942fc274307}{E\+X\+\_\+\+B86\+\_\+\+M\+G\+C()}} 
+
+
+
+Definition at line 157 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a4f4a088595aaedaa9cbc34982eb6d575}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a4f4a088595aaedaa9cbc34982eb6d575}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_B88@{EX\_B88}}
+\index{EX\_B88@{EX\_B88}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_B88()}{EX\_B88()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+B88 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a4f4a088595aaedaa9cbc34982eb6d575}{E\+X\+\_\+\+B88()}} 
+
+
+
+Definition at line 192 of file Func\+\_\+\+Depos.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_ae7b0fae6c90704c4a8bdf195915359d9}\label{classpsi_1_1mydft_1_1_d_f_t_solver_ae7b0fae6c90704c4a8bdf195915359d9}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_B88\_I@{EX\_B88\_I}}
+\index{EX\_B88\_I@{EX\_B88\_I}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_B88\_I()}{EX\_B88\_I()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+B88\+\_\+I (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 187 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a2ef4ec49de187fc12372356c00621259}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a2ef4ec49de187fc12372356c00621259}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_LDA@{EX\_LDA}}
+\index{EX\_LDA@{EX\_LDA}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_LDA()}{EX\_LDA()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+L\+DA (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ Vector $>$}]{rho\+\_\+a,  }\item[{std\+::shared\+\_\+ptr$<$ Vector $>$}]{rho\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build E\+X\+\_\+\+L\+D\+A(rho) 
+
+
+
+Definition at line 79 of file Func\+\_\+\+Depos.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a4269a92c79149361a83c283fe27b1359}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a4269a92c79149361a83c283fe27b1359}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_LSDA\_I@{EX\_LSDA\_I}}
+\index{EX\_LSDA\_I@{EX\_LSDA\_I}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_LSDA\_I()}{EX\_LSDA\_I()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+L\+S\+D\+A\+\_\+I (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ Vector $>$}]{rho\+\_\+a,  }\item[{std\+::shared\+\_\+ptr$<$ Vector $>$}]{rho\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build E\+X\+\_\+\+L\+S\+D\+A(rho\+\_\+a, rho\+\_\+b) 
+
+
+
+Definition at line 116 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_ae7e310a13ec57ebf820be4fbc2d7cddf}\label{classpsi_1_1mydft_1_1_d_f_t_solver_ae7e310a13ec57ebf820be4fbc2d7cddf}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_LSDA\_III@{EX\_LSDA\_III}}
+\index{EX\_LSDA\_III@{EX\_LSDA\_III}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_LSDA\_III()}{EX\_LSDA\_III()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+L\+S\+D\+A\+\_\+\+I\+II (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ Vector $>$}]{rho,  }\item[{std\+::shared\+\_\+ptr$<$ Vector $>$}]{zeta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build E\+X\+\_\+\+L\+S\+D\+A(rho, zeta) 
+
+
+
+Definition at line 136 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a82520363205009f882336deeba18b83e}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a82520363205009f882336deeba18b83e}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_LSDA\_Sigma@{EX\_LSDA\_Sigma}}
+\index{EX\_LSDA\_Sigma@{EX\_LSDA\_Sigma}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_LSDA\_Sigma()}{EX\_LSDA\_Sigma()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+L\+S\+D\+A\+\_\+\+Sigma (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ Vector $>$}]{rho\+\_\+sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build E\+X\+\_\+\+L\+S\+D\+A(rho\+\_\+sigma) 
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a67b3816769baf16cb1e8d7ffa76c9d2c}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a67b3816769baf16cb1e8d7ffa76c9d2c}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_PBE@{EX\_PBE}}
+\index{EX\_PBE@{EX\_PBE}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_PBE()}{EX\_PBE()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+P\+BE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a67b3816769baf16cb1e8d7ffa76c9d2c}{E\+X\+\_\+\+P\+B\+E()}} 
+
+
+
+Definition at line 357 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a69867a5089ee70ec80a2a164cab22af8}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a69867a5089ee70ec80a2a164cab22af8}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_PBE\_I@{EX\_PBE\_I}}
+\index{EX\_PBE\_I@{EX\_PBE\_I}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_PBE\_I()}{EX\_PBE\_I()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+P\+B\+E\+\_\+I (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 399 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a6b629007fca1c29ed45635fd3a304e2b}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a6b629007fca1c29ed45635fd3a304e2b}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_RPBE@{EX\_RPBE}}
+\index{EX\_RPBE@{EX\_RPBE}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_RPBE()}{EX\_RPBE()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+R\+P\+BE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a6b629007fca1c29ed45635fd3a304e2b}{E\+X\+\_\+\+R\+P\+B\+E()}} 
+
+
+
+Definition at line 335 of file Func\+\_\+\+Depos.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a861d5fa1ad827d121f6113d37a80c042}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a861d5fa1ad827d121f6113d37a80c042}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_UPBE@{EX\_UPBE}}
+\index{EX\_UPBE@{EX\_UPBE}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_UPBE()}{EX\_UPBE()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+\+U\+P\+BE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_a861d5fa1ad827d121f6113d37a80c042}{E\+X\+\_\+\+U\+P\+B\+E()}} 
+
+
+
+Definition at line 431 of file Func\+\_\+\+Depos.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_ac722adcf2074b3b808857737dba98d4e}\label{classpsi_1_1mydft_1_1_d_f_t_solver_ac722adcf2074b3b808857737dba98d4e}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EX\_wPBE\_I@{EX\_wPBE\_I}}
+\index{EX\_wPBE\_I@{EX\_wPBE\_I}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EX\_wPBE\_I()}{EX\_wPBE\_I()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+\_\+w\+P\+B\+E\+\_\+I (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 483 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aa155f60d537ea0e8690ec1579c3258b8}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aa155f60d537ea0e8690ec1579c3258b8}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!EXC\_B3LYP@{EXC\_B3LYP}}
+\index{EXC\_B3LYP@{EXC\_B3LYP}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{EXC\_B3LYP()}{EXC\_B3LYP()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+E\+X\+C\+\_\+\+B3\+L\+YP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build \mbox{\hyperlink{classpsi_1_1mydft_1_1_d_f_t_solver_aa155f60d537ea0e8690ec1579c3258b8}{E\+X\+C\+\_\+\+B3\+L\+Y\+P()}} 
+
+
+
+Definition at line 2082 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a9d38f0b66eb3c65feb8a7a35ae115a66}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a9d38f0b66eb3c65feb8a7a35ae115a66}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!ExchangeCorrelationEnergy@{ExchangeCorrelationEnergy}}
+\index{ExchangeCorrelationEnergy@{ExchangeCorrelationEnergy}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{ExchangeCorrelationEnergy()}{ExchangeCorrelationEnergy()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+Exchange\+Correlation\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+explicitly evaluate exchange correlation energy 
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a0bb08d68329aa9347a2774a00befd253}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a0bb08d68329aa9347a2774a00befd253}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!Gfunction@{Gfunction}}
+\index{Gfunction@{Gfunction}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{Gfunction()}{Gfunction()}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+Gfunction (\begin{DoxyParamCaption}\item[{double}]{r,  }\item[{double}]{A,  }\item[{double}]{a1,  }\item[{double}]{b1,  }\item[{double}]{b2,  }\item[{double}]{b3,  }\item[{double}]{b4,  }\item[{double}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+build G spin-\/interpolation formula 
+
+
+
+Definition at line 85 of file Func\+\_\+\+H\+C.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_abacb08860446724fc574301e0d45bdcb}\label{classpsi_1_1mydft_1_1_d_f_t_solver_abacb08860446724fc574301e0d45bdcb}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!OrbitalGradient@{OrbitalGradient}}
+\index{OrbitalGradient@{OrbitalGradient}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{OrbitalGradient()}{OrbitalGradient()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ Matrix $>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+Orbital\+Gradient (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ Matrix $>$}]{D,  }\item[{std\+::shared\+\_\+ptr$<$ Matrix $>$}]{F,  }\item[{std\+::shared\+\_\+ptr$<$ Matrix $>$}]{Shalf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+evaluate the orbital gradient 
+
+
+
+Definition at line 879 of file dft.\+cc.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a98ec9ff3ee77f09fc36328134ee14842}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a98ec9ff3ee77f09fc36328134ee14842}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!same\_a\_b\_dens@{same\_a\_b\_dens}}
+\index{same\_a\_b\_dens@{same\_a\_b\_dens}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{same\_a\_b\_dens()}{same\_a\_b\_dens()}}
+{\footnotesize\ttfamily virtual bool psi\+::mydft\+::\+D\+F\+T\+Solver\+::same\+\_\+a\+\_\+b\+\_\+dens (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 69 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aca0500e392ce3f5f0cbd23e732af2d3e}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aca0500e392ce3f5f0cbd23e732af2d3e}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!same\_a\_b\_orbs@{same\_a\_b\_orbs}}
+\index{same\_a\_b\_orbs@{same\_a\_b\_orbs}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{same\_a\_b\_orbs()}{same\_a\_b\_orbs()}}
+{\footnotesize\ttfamily virtual bool psi\+::mydft\+::\+D\+F\+T\+Solver\+::same\+\_\+a\+\_\+b\+\_\+orbs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 68 of file dft.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_af619b852aca149053b9d87351aeab3dc}\label{classpsi_1_1mydft_1_1_d_f_t_solver_af619b852aca149053b9d87351aeab3dc}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!deriv\_@{deriv\_}}
+\index{deriv\_@{deriv\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{deriv\_}{deriv\_}}
+{\footnotesize\ttfamily int psi\+::mydft\+::\+D\+F\+T\+Solver\+::deriv\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+level of differentiation 
+
+
+
+Definition at line 89 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a8b14995264f1c56445991e9208f66e72}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a8b14995264f1c56445991e9208f66e72}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!enuc\_@{enuc\_}}
+\index{enuc\_@{enuc\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{enuc\_}{enuc\_}}
+{\footnotesize\ttfamily double psi\+::mydft\+::\+D\+F\+T\+Solver\+::enuc\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the nuclear repulsion energy 
+
+
+
+Definition at line 74 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a651a44a7132c15e0084479c7a87c9699}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a651a44a7132c15e0084479c7a87c9699}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!grid\_w\_@{grid\_w\_}}
+\index{grid\_w\_@{grid\_w\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{grid\_w\_}{grid\_w\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::grid\+\_\+w\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+grid weights 
+
+
+
+Definition at line 125 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a3bc80a249d115f14d1e20323895a489a}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a3bc80a249d115f14d1e20323895a489a}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!grid\_x\_@{grid\_x\_}}
+\index{grid\_x\_@{grid\_x\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{grid\_x\_}{grid\_x\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::grid\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+grid x values 
+
+
+
+Definition at line 116 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a684823a2c1a723de9c8d95126f6ffcb0}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a684823a2c1a723de9c8d95126f6ffcb0}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!grid\_y\_@{grid\_y\_}}
+\index{grid\_y\_@{grid\_y\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{grid\_y\_}{grid\_y\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::grid\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+grid y values 
+
+
+
+Definition at line 119 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aca67d15d7996bcf085bda0dd4cd224fa}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aca67d15d7996bcf085bda0dd4cd224fa}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!grid\_z\_@{grid\_z\_}}
+\index{grid\_z\_@{grid\_z\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{grid\_z\_}{grid\_z\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::grid\+\_\+z\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+grid z values 
+
+
+
+Definition at line 122 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_addec44b3a027f190194a2de7021dfb3f}\label{classpsi_1_1mydft_1_1_d_f_t_solver_addec44b3a027f190194a2de7021dfb3f}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!is\_gga\_@{is\_gga\_}}
+\index{is\_gga\_@{is\_gga\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{is\_gga\_}{is\_gga\_}}
+{\footnotesize\ttfamily bool psi\+::mydft\+::\+D\+F\+T\+Solver\+::is\+\_\+gga\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+is gga? 
+
+
+
+Definition at line 92 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a517705f279c85c9a23f280d902370572}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a517705f279c85c9a23f280d902370572}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!is\_meta\_@{is\_meta\_}}
+\index{is\_meta\_@{is\_meta\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{is\_meta\_}{is\_meta\_}}
+{\footnotesize\ttfamily bool psi\+::mydft\+::\+D\+F\+T\+Solver\+::is\+\_\+meta\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+is meta? 
+
+
+
+Definition at line 95 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a8a566221b4fbb1d612bb7ea79a836007}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a8a566221b4fbb1d612bb7ea79a836007}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!is\_unpolarized\_@{is\_unpolarized\_}}
+\index{is\_unpolarized\_@{is\_unpolarized\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{is\_unpolarized\_}{is\_unpolarized\_}}
+{\footnotesize\ttfamily bool psi\+::mydft\+::\+D\+F\+T\+Solver\+::is\+\_\+unpolarized\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+is unpolarized (restricted)? 
+
+
+
+Definition at line 98 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aa533e5ed17d8be606fb969c97e827cba}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aa533e5ed17d8be606fb969c97e827cba}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!m\_@{m\_}}
+\index{m\_@{m\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{m\_}{m\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::m\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+spin magnetization factor / net spin-\/density m = rho\+\_\+a(r) -\/ rho\+\_\+b(r) 
+
+
+
+Definition at line 241 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a9233049f24b7723b4d16f7a91fe37ea2}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a9233049f24b7723b4d16f7a91fe37ea2}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!phi\_points\_@{phi\_points\_}}
+\index{phi\_points\_@{phi\_points\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{phi\_points\_}{phi\_points\_}}
+{\footnotesize\ttfamily long int psi\+::mydft\+::\+D\+F\+T\+Solver\+::phi\+\_\+points\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+number of grid points\+\_\+ 
+
+
+
+Definition at line 101 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a790c9459107390e0588e0d09b499338d}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a790c9459107390e0588e0d09b499338d}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!rho\_@{rho\_}}
+\index{rho\_@{rho\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{rho\_}{rho\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::rho\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+total spin density 
+
+
+
+Definition at line 134 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aa5c473285fd59d8d22cd7f316860e360}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aa5c473285fd59d8d22cd7f316860e360}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!rho\_a\_@{rho\_a\_}}
+\index{rho\_a\_@{rho\_a\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{rho\_a\_}{rho\_a\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::rho\+\_\+a\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+alpha spin density 
+
+
+
+Definition at line 128 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a12f3a767349528967d16d4d442113779}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a12f3a767349528967d16d4d442113779}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!rho\_a\_x\_@{rho\_a\_x\_}}
+\index{rho\_a\_x\_@{rho\_a\_x\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{rho\_a\_x\_}{rho\_a\_x\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::rho\+\_\+a\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+alpha spin density gradient x 
+
+
+
+Definition at line 137 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_ac4dd0dbeb771fc50187a8f30e6841b42}\label{classpsi_1_1mydft_1_1_d_f_t_solver_ac4dd0dbeb771fc50187a8f30e6841b42}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!rho\_a\_y\_@{rho\_a\_y\_}}
+\index{rho\_a\_y\_@{rho\_a\_y\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{rho\_a\_y\_}{rho\_a\_y\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::rho\+\_\+a\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+alpha spin density gradient y 
+
+
+
+Definition at line 143 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a23096890948e53312738fd9c6ac4b6c0}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a23096890948e53312738fd9c6ac4b6c0}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!rho\_a\_z\_@{rho\_a\_z\_}}
+\index{rho\_a\_z\_@{rho\_a\_z\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{rho\_a\_z\_}{rho\_a\_z\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::rho\+\_\+a\+\_\+z\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+alpha spin density gradient z 
+
+
+
+Definition at line 149 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a2fb176d630b3fe41425aee59e5aa694f}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a2fb176d630b3fe41425aee59e5aa694f}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!rho\_b\_@{rho\_b\_}}
+\index{rho\_b\_@{rho\_b\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{rho\_b\_}{rho\_b\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::rho\+\_\+b\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+beta spin density 
+
+
+
+Definition at line 131 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aebd2bd7e5e961fc6490918616fe298e5}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aebd2bd7e5e961fc6490918616fe298e5}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!rho\_b\_x\_@{rho\_b\_x\_}}
+\index{rho\_b\_x\_@{rho\_b\_x\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{rho\_b\_x\_}{rho\_b\_x\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::rho\+\_\+b\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+beta spin density gradient x 
+
+
+
+Definition at line 140 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_ae20bdef95de5b648a9ec923bf768c553}\label{classpsi_1_1mydft_1_1_d_f_t_solver_ae20bdef95de5b648a9ec923bf768c553}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!rho\_b\_y\_@{rho\_b\_y\_}}
+\index{rho\_b\_y\_@{rho\_b\_y\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{rho\_b\_y\_}{rho\_b\_y\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::rho\+\_\+b\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+beta spin density gradient y 
+
+
+
+Definition at line 146 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a80322630839c5470804cf4876019b875}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a80322630839c5470804cf4876019b875}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!rho\_b\_z\_@{rho\_b\_z\_}}
+\index{rho\_b\_z\_@{rho\_b\_z\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{rho\_b\_z\_}{rho\_b\_z\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::rho\+\_\+b\+\_\+z\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+beta spin density gradient z 
+
+
+
+Definition at line 152 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a7fbed2baefe4ece46b3cf1618d15f703}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a7fbed2baefe4ece46b3cf1618d15f703}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!rs\_@{rs\_}}
+\index{rs\_@{rs\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{rs\_}{rs\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::rs\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+effective radius of density 
+
+
+
+Definition at line 244 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_adfc6500838abe05f410a40ffca8562b9}\label{classpsi_1_1mydft_1_1_d_f_t_solver_adfc6500838abe05f410a40ffca8562b9}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!Shalf2@{Shalf2}}
+\index{Shalf2@{Shalf2}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{Shalf2}{Shalf2}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Matrix$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+Shalf2\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 232 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a73d12809a4119c26949e367fcb821c42}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a73d12809a4119c26949e367fcb821c42}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!Shalf\_@{Shalf\_}}
+\index{Shalf\_@{Shalf\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{Shalf\_}{Shalf\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Matrix$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+Shalf\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+S$^\wedge$\{-\/1/2\}. 
+
+
+
+Definition at line 231 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a7e7e6c1d25ae42515bf7896e5d47e9a5}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a7e7e6c1d25ae42515bf7896e5d47e9a5}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!sigma\_@{sigma\_}}
+\index{sigma\_@{sigma\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{sigma\_}{sigma\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::sigma\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+total density gradient 
+
+
+
+Definition at line 164 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aaed051a35da613e019517068035cc759}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aaed051a35da613e019517068035cc759}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!sigma\_aa\_@{sigma\_aa\_}}
+\index{sigma\_aa\_@{sigma\_aa\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{sigma\_aa\_}{sigma\_aa\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::sigma\+\_\+aa\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+inner product of alpha density gradient with itself (gamma\+\_\+aa) 
+
+
+
+Definition at line 155 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a5faf9c53ba5c6cc14ff469e5e03b1504}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a5faf9c53ba5c6cc14ff469e5e03b1504}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!sigma\_ab\_@{sigma\_ab\_}}
+\index{sigma\_ab\_@{sigma\_ab\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{sigma\_ab\_}{sigma\_ab\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::sigma\+\_\+ab\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+inner product of alpha density gradient with beta density gradient (gamma\+\_\+ab) 
+
+
+
+Definition at line 161 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a7a05bfb4111c314a5acb54f71a71e414}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a7a05bfb4111c314a5acb54f71a71e414}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!sigma\_bb\_@{sigma\_bb\_}}
+\index{sigma\_bb\_@{sigma\_bb\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{sigma\_bb\_}{sigma\_bb\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::sigma\+\_\+bb\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+inner product of beta density gradient with itself (gamma\+\_\+bb) 
+
+
+
+Definition at line 158 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a809915e8a9587e23e68731be2da234a8}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a809915e8a9587e23e68731be2da234a8}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!super\_phi\_@{super\_phi\_}}
+\index{super\_phi\_@{super\_phi\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{super\_phi\_}{super\_phi\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Matrix$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::super\+\_\+phi\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+phi matrix 
+
+
+
+Definition at line 104 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a1485989464e5e3db059053389824944b}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a1485989464e5e3db059053389824944b}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!super\_phi\_x\_@{super\_phi\_x\_}}
+\index{super\_phi\_x\_@{super\_phi\_x\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{super\_phi\_x\_}{super\_phi\_x\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Matrix$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::super\+\_\+phi\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+d phi / dx matrix 
+
+
+
+Definition at line 107 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_abd53261be0e1d2bc3ee62d3ceabc635b}\label{classpsi_1_1mydft_1_1_d_f_t_solver_abd53261be0e1d2bc3ee62d3ceabc635b}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!super\_phi\_y\_@{super\_phi\_y\_}}
+\index{super\_phi\_y\_@{super\_phi\_y\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{super\_phi\_y\_}{super\_phi\_y\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Matrix$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::super\+\_\+phi\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+d phi / dy matrix 
+
+
+
+Definition at line 110 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a03b92e24724c21a7e42f934b7f0c6e76}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a03b92e24724c21a7e42f934b7f0c6e76}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!super\_phi\_z\_@{super\_phi\_z\_}}
+\index{super\_phi\_z\_@{super\_phi\_z\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{super\_phi\_z\_}{super\_phi\_z\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Matrix$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::super\+\_\+phi\+\_\+z\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+d phi / dz matrix 
+
+
+
+Definition at line 113 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a25bbc72ca996aba0ad2b5d852d198b01}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a25bbc72ca996aba0ad2b5d852d198b01}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!tau\_a\_@{tau\_a\_}}
+\index{tau\_a\_@{tau\_a\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{tau\_a\_}{tau\_a\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::tau\+\_\+a\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+tau kinetic energy of alpha electrons 
+
+
+
+Definition at line 247 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a7dfcad9a0f49601e218144a70c847f18}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a7dfcad9a0f49601e218144a70c847f18}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!tau\_b\_@{tau\_b\_}}
+\index{tau\_b\_@{tau\_b\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{tau\_b\_}{tau\_b\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::tau\+\_\+b\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+tau kinetic energy of beta electrons 
+
+
+
+Definition at line 250 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_ab41bfdf63e2340a8c7681d53ef3bb4b9}\label{classpsi_1_1mydft_1_1_d_f_t_solver_ab41bfdf63e2340a8c7681d53ef3bb4b9}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2rho\_a2\_@{v2rho\_a2\_}}
+\index{v2rho\_a2\_@{v2rho\_a2\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2rho\_a2\_}{v2rho\_a2\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2rho\+\_\+a2\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to alpha density 
+
+
+
+Definition at line 182 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a6f26642cbf47ffc20dd467a9b89938b9}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a6f26642cbf47ffc20dd467a9b89938b9}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2rho\_a\_sigma\_aa\_@{v2rho\_a\_sigma\_aa\_}}
+\index{v2rho\_a\_sigma\_aa\_@{v2rho\_a\_sigma\_aa\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2rho\_a\_sigma\_aa\_}{v2rho\_a\_sigma\_aa\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2rho\+\_\+a\+\_\+sigma\+\_\+aa\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to rho\+\_\+a\+\_\+ and gamma\+\_\+aa\+\_\+ 
+
+
+
+Definition at line 191 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a32a412419a2b8f8ca1048bb0a40842af}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a32a412419a2b8f8ca1048bb0a40842af}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2rho\_a\_sigma\_ab\_@{v2rho\_a\_sigma\_ab\_}}
+\index{v2rho\_a\_sigma\_ab\_@{v2rho\_a\_sigma\_ab\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2rho\_a\_sigma\_ab\_}{v2rho\_a\_sigma\_ab\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2rho\+\_\+a\+\_\+sigma\+\_\+ab\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to rho\+\_\+a\+\_\+ and gamma\+\_\+ab\+\_\+ 
+
+
+
+Definition at line 203 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a8b985e041e036d3cc3f2816ecaa86f42}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a8b985e041e036d3cc3f2816ecaa86f42}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2rho\_a\_sigma\_bb\_@{v2rho\_a\_sigma\_bb\_}}
+\index{v2rho\_a\_sigma\_bb\_@{v2rho\_a\_sigma\_bb\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2rho\_a\_sigma\_bb\_}{v2rho\_a\_sigma\_bb\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2rho\+\_\+a\+\_\+sigma\+\_\+bb\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to rho\+\_\+a\+\_\+ and gamma\+\_\+bb\+\_\+ 
+
+
+
+Definition at line 209 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a7de00f4b6ab4cfb7b8f3bbfff986d80a}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a7de00f4b6ab4cfb7b8f3bbfff986d80a}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2rho\_ab\_@{v2rho\_ab\_}}
+\index{v2rho\_ab\_@{v2rho\_ab\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2rho\_ab\_}{v2rho\_ab\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2rho\+\_\+ab\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to alpha and beta densities 
+
+
+
+Definition at line 185 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a79ccd4c97595c7833cb54081812cf33f}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a79ccd4c97595c7833cb54081812cf33f}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2rho\_b2\_@{v2rho\_b2\_}}
+\index{v2rho\_b2\_@{v2rho\_b2\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2rho\_b2\_}{v2rho\_b2\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2rho\+\_\+b2\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to beta density 
+
+
+
+Definition at line 188 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_acbfb5895883ed0d444e080fd950dd65d}\label{classpsi_1_1mydft_1_1_d_f_t_solver_acbfb5895883ed0d444e080fd950dd65d}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2rho\_b\_sigma\_aa\_@{v2rho\_b\_sigma\_aa\_}}
+\index{v2rho\_b\_sigma\_aa\_@{v2rho\_b\_sigma\_aa\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2rho\_b\_sigma\_aa\_}{v2rho\_b\_sigma\_aa\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2rho\+\_\+b\+\_\+sigma\+\_\+aa\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to rho\+\_\+b\+\_\+ and gamma\+\_\+aa\+\_\+ 
+
+
+
+Definition at line 212 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_ab60fc0c42cc88e9b72e5649f3ee8078a}\label{classpsi_1_1mydft_1_1_d_f_t_solver_ab60fc0c42cc88e9b72e5649f3ee8078a}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2rho\_b\_sigma\_ab\_@{v2rho\_b\_sigma\_ab\_}}
+\index{v2rho\_b\_sigma\_ab\_@{v2rho\_b\_sigma\_ab\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2rho\_b\_sigma\_ab\_}{v2rho\_b\_sigma\_ab\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2rho\+\_\+b\+\_\+sigma\+\_\+ab\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to rho\+\_\+b\+\_\+ and gamma\+\_\+ab\+\_\+ 
+
+
+
+Definition at line 206 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a5cd1f5f38fd68dee35bd96b6b54ded33}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a5cd1f5f38fd68dee35bd96b6b54ded33}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2rho\_b\_sigma\_bb\_@{v2rho\_b\_sigma\_bb\_}}
+\index{v2rho\_b\_sigma\_bb\_@{v2rho\_b\_sigma\_bb\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2rho\_b\_sigma\_bb\_}{v2rho\_b\_sigma\_bb\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2rho\+\_\+b\+\_\+sigma\+\_\+bb\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to rho\+\_\+b\+\_\+ and gamma\+\_\+bb\+\_\+ 
+
+
+
+Definition at line 194 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aef9f1dc622f1eac73621a1a8607c2187}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aef9f1dc622f1eac73621a1a8607c2187}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2sigma\_aa2\_@{v2sigma\_aa2\_}}
+\index{v2sigma\_aa2\_@{v2sigma\_aa2\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2sigma\_aa2\_}{v2sigma\_aa2\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2sigma\+\_\+aa2\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to gamma\+\_\+aa\+\_\+ 
+
+
+
+Definition at line 197 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a106a77d149b7febc8f09b57953cc300c}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a106a77d149b7febc8f09b57953cc300c}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2sigma\_aa\_ab\_@{v2sigma\_aa\_ab\_}}
+\index{v2sigma\_aa\_ab\_@{v2sigma\_aa\_ab\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2sigma\_aa\_ab\_}{v2sigma\_aa\_ab\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2sigma\+\_\+aa\+\_\+ab\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to gamma\+\_\+aa\+\_\+ and gamma\+\_\+ab\+\_\+ 
+
+
+
+Definition at line 215 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a1e11a85c15a73a70b3871a6d9bfd4626}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a1e11a85c15a73a70b3871a6d9bfd4626}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2sigma\_aa\_bb\_@{v2sigma\_aa\_bb\_}}
+\index{v2sigma\_aa\_bb\_@{v2sigma\_aa\_bb\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2sigma\_aa\_bb\_}{v2sigma\_aa\_bb\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2sigma\+\_\+aa\+\_\+bb\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to gamma\+\_\+aa\+\_\+ and gamma\+\_\+bb\+\_\+ 
+
+
+
+Definition at line 218 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a342cae6770c1c8ea559a8a2996c4dde9}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a342cae6770c1c8ea559a8a2996c4dde9}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2sigma\_ab2\_@{v2sigma\_ab2\_}}
+\index{v2sigma\_ab2\_@{v2sigma\_ab2\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2sigma\_ab2\_}{v2sigma\_ab2\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2sigma\+\_\+ab2\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to gamma\+\_\+ab\+\_\+ 
+
+
+
+Definition at line 221 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a17e9aad24d87f5775aa936ec5116bfd6}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a17e9aad24d87f5775aa936ec5116bfd6}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2sigma\_ab\_bb\_@{v2sigma\_ab\_bb\_}}
+\index{v2sigma\_ab\_bb\_@{v2sigma\_ab\_bb\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2sigma\_ab\_bb\_}{v2sigma\_ab\_bb\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2sigma\+\_\+ab\+\_\+bb\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to gamma\+\_\+ab\+\_\+ and gamma\+\_\+bb\+\_\+ 
+
+
+
+Definition at line 224 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a4fd50ccb768188d5d50cc9b2a80bbbe5}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a4fd50ccb768188d5d50cc9b2a80bbbe5}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!v2sigma\_bb2\_@{v2sigma\_bb2\_}}
+\index{v2sigma\_bb2\_@{v2sigma\_bb2\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{v2sigma\_bb2\_}{v2sigma\_bb2\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::v2sigma\+\_\+bb2\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2nd derivative of the functional with respect to gamma\+\_\+bb\+\_\+ 
+
+
+
+Definition at line 200 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a028b5026877b9b194f79936148d2f206}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a028b5026877b9b194f79936148d2f206}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!Va\_@{Va\_}}
+\index{Va\_@{Va\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{Va\_}{Va\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Matrix$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+Va\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+xc potential matrices 
+
+
+
+Definition at line 82 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a18e5b14676185ddbdedd95ec2cf4c3d4}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a18e5b14676185ddbdedd95ec2cf4c3d4}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!Vb\_@{Vb\_}}
+\index{Vb\_@{Vb\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{Vb\_}{Vb\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Matrix$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::\+Vb\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 83 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a0770fcb7c71eecbf86de9203fed5bac7}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a0770fcb7c71eecbf86de9203fed5bac7}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!vrho\_a\_@{vrho\_a\_}}
+\index{vrho\_a\_@{vrho\_a\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{vrho\_a\_}{vrho\_a\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::vrho\+\_\+a\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+derivative of the functional with respect to rho\+\_\+a\+\_\+ 
+
+
+
+Definition at line 167 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a898481964e9935d2a201ed14fe2ee3b5}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a898481964e9935d2a201ed14fe2ee3b5}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!vrho\_b\_@{vrho\_b\_}}
+\index{vrho\_b\_@{vrho\_b\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{vrho\_b\_}{vrho\_b\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::vrho\+\_\+b\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+derivative of the functional with respect to rho\+\_\+b\+\_\+ 
+
+
+
+Definition at line 170 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_a728883147990842a1ce2ba8557a68b89}\label{classpsi_1_1mydft_1_1_d_f_t_solver_a728883147990842a1ce2ba8557a68b89}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!vsigma\_aa\_@{vsigma\_aa\_}}
+\index{vsigma\_aa\_@{vsigma\_aa\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{vsigma\_aa\_}{vsigma\_aa\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::vsigma\+\_\+aa\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+derivative of the functional with respect to gamma\+\_\+aa\+\_\+ 
+
+
+
+Definition at line 173 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_ad8de73f0ce06bf8f3f59c12dbb28fa2d}\label{classpsi_1_1mydft_1_1_d_f_t_solver_ad8de73f0ce06bf8f3f59c12dbb28fa2d}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!vsigma\_ab\_@{vsigma\_ab\_}}
+\index{vsigma\_ab\_@{vsigma\_ab\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{vsigma\_ab\_}{vsigma\_ab\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::vsigma\+\_\+ab\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+derivative of the functional with respect to gamma\+\_\+ab\+\_\+ 
+
+
+
+Definition at line 179 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_aadb8a25881145d1ab130a7ded425fc52}\label{classpsi_1_1mydft_1_1_d_f_t_solver_aadb8a25881145d1ab130a7ded425fc52}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!vsigma\_bb\_@{vsigma\_bb\_}}
+\index{vsigma\_bb\_@{vsigma\_bb\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{vsigma\_bb\_}{vsigma\_bb\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::vsigma\+\_\+bb\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+derivative of the functional with respect to gamma\+\_\+bb\+\_\+ 
+
+
+
+Definition at line 176 of file dft.\+h.
+
+\mbox{\Hypertarget{classpsi_1_1mydft_1_1_d_f_t_solver_ab7ad4a4e0c598851c6b0fc6a7d353d5a}\label{classpsi_1_1mydft_1_1_d_f_t_solver_ab7ad4a4e0c598851c6b0fc6a7d353d5a}} 
+\index{psi::mydft::DFTSolver@{psi::mydft::DFTSolver}!zeta\_@{zeta\_}}
+\index{zeta\_@{zeta\_}!psi::mydft::DFTSolver@{psi::mydft::DFTSolver}}
+\doxysubsubsection{\texorpdfstring{zeta\_}{zeta\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Vector$>$ psi\+::mydft\+::\+D\+F\+T\+Solver\+::zeta\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+zeta factor zeta = ( rho\+\_\+a(r) -\/ rho\+\_\+b(r) ) / ( rho\+\_\+a(r) + rho\+\_\+b(r) ) 
+
+
+
+Definition at line 238 of file dft.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sina/\+My\+Softwares/dft\+\_\+test\+\_\+plugin/src/dft/\mbox{\hyperlink{dft_8h}{dft.\+h}}\item 
+/home/sina/\+My\+Softwares/dft\+\_\+test\+\_\+plugin/src/dft/\mbox{\hyperlink{dft_8cc}{dft.\+cc}}\item 
+/home/sina/\+My\+Softwares/dft\+\_\+test\+\_\+plugin/src/functionals/\mbox{\hyperlink{_func___depos_8cc}{Func\+\_\+\+Depos.\+cc}}\item 
+/home/sina/\+My\+Softwares/dft\+\_\+test\+\_\+plugin/src/functionals/\mbox{\hyperlink{_func___h_c_8cc}{Func\+\_\+\+H\+C.\+cc}}\item 
+/home/sina/\+My\+Softwares/dft\+\_\+test\+\_\+plugin/src/functionals/\mbox{\hyperlink{_func___implem_8cc}{Func\+\_\+\+Implem.\+cc}}\end{DoxyCompactItemize}
