@@ -1151,7 +1151,11 @@ GENERATE_HTML          = YES
 # The default directory is: html.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
+<<<<<<< HEAD
 HTML_OUTPUT            = .
+=======
+HTML_OUTPUT            = $(TRAVIS_BUILD_DIR)/docs
+>>>>>>> aea98ed784924b82745e725c01ce157c7de180cc
 
 # The HTML_FILE_EXTENSION tag can be used to specify the file extension for each
 # generated HTML page (for example: .htm, .php, .asp).
