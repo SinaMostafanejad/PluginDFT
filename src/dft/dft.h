@@ -27,6 +27,17 @@
  * @END LICENSE
  */
 
+/**
+ * @file dft.h
+ * @author Mohammad Mostafanejad
+ * @date September 2, 2019
+ * 
+ * \mainpage Description
+ * The MyDft project is a plugin to Psi4 program package. The main goal of this plugin
+ * is to allow the user to practice various aspects of code manufacture and 
+ * production pipelines.
+ */
+
 #ifndef DFT_SOLVER_H
 #define DFT_SOLVER_H
 
@@ -58,48 +69,6 @@ class DFTSolver: public Wavefunction{
     virtual bool same_a_b_dens() const { return same_a_b_dens_; }
 
   protected:
-
-   // //************************************************
-   // //*      Constants for building functionals      *
-   // //************************************************
-   // // const double alpha_ = 0.773;
-   // // const double alpha_ = 0.75;
-   // const double alpha_ = (2.0/3.0);      // Gaspar, Kohn and Sham value
-   // // const double alpha_ = 1.0;         // Slater's value
-   // const double Cx_ = (9.0/8.0) * alpha_ * pow(3.0/M_PI,1.0/3.0);
-
-   // static const double pa_ = 1.0;
-
-   // static const double Aa_ = 0.0168869;
-   // static const double a1a_ = 0.11125;
-   // static const double b1a_ = 10.357;
-   // static const double b2a_ = 3.6231;
-   // static const double b3a_ = 0.88026;
-   // static const double b4a_ = 0.49671;
-
-   // static const double pe_ = 1.0;
-
-   // static const double c0p_ = 0.0310907;
-   // static const double a1p_ = 0.21370;
-   // static const double b1p_ = 7.5957;
-   // static const double b2p_ = 3.5876;
-   // static const double b3p_ = 1.6382;
-   // static const double b4p_ = 0.49294;
-
-   // static const double c0f_ = 0.01554535;
-   // static const double a1f_ = 0.20548;
-   // static const double b1f_ = 14.1189;
-   // static const double b2f_ = 6.1977;
-   // static const double b3f_ = 3.3662;
-   // static const double b4f_ = 0.62517;
-
-   // static const double BETA_ = 0.06672455060314922;
-   // static const double MU_ = 0.2195149727645171;
-   // static const double KAPPA_ = 0.804;
-   // static const double GAMMA_ = 0.0310906908696549;
-
-   // /// Value of the second derivative of f(zeta) weight factor at zeta = 0 
-   // static const double d2fZet0_ = 1.709921;
 
     /// the nuclear repulsion energy
     double enuc_;
