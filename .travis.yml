@@ -16,13 +16,13 @@ addons:
 
 # Build your code e.g. by calling make
 script:
-  - cd docs && doxygen Doxyfile
+  - cd doc && doxygen Doxyfile
 
 # Generate and deploy documentation
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: docs
+  local_dir: doc
   github_token: $GH_REPO_TOKEN
   on:
     branch: master
