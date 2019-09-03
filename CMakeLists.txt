@@ -37,9 +37,9 @@ set(mydfft_DESCRIPTION "Open-Source Quantum Chemistry")
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 list(APPEND CMAKE_MODULE_PATH /home/sina/MySoftwares/psi4_May_19/cmake)
-
 include(custom_color_messages)
 
+# As a Psi4 plugin, the mydft project assumes psi4 is installed on the host
 find_package(psi4 1.0 REQUIRED)
 
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
