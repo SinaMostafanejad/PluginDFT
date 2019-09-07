@@ -39,7 +39,7 @@ def run_mydft(name, **kwargs):
     >>> energy('mydft')
 
     """
-    lowername = name.lower()
+    #lowername = name.lower()
     kwargs = p4util.kwargs_lower(kwargs)
 
     # Your plugin's psi4 run sequence goes here
