@@ -26,3 +26,9 @@ deploy:
   github_token: $GH_REPO_TOKEN
   on:
     branch: master
+    
+before_install:
+  - pip install --user codecov
+
+after_success:
+  - codecov --file coverage/lcov.info --disable search
